@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/') 
 def index():
 	return "<h1 style = 'color: blue'>hello flask</h1>"
-#Can return just "hello flask" - this is with styling
+#Can return just "hello flask" - this is html with inline styling
 
 # If app.py is run directly from cmd line 
 #it's going to be assigned the value main
