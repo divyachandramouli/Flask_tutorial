@@ -1,0 +1,41 @@
+
+--------------
+Flask Tutorial 
+--------------
+Chris Hawkes, YouTube
+
+Creating our first app:
+- Building a basic movie website
+
+Installation:
+
+- Need to use virtual env - comes with Python 3.5 - to be able to isolate the 
+development environment for each project we are working on - 
+
+ 	pip install virtualenv
+
+- Move to the directory you are working in, create an environment called env
+
+	virtualenv env
+
+- Enter into env/Scripts
+	cd env
+	cd Scripts
+
+- Activate the environment
+	'activate' in Scripts - run that to start the env
+
+- Check that Python is installed
+- Exit the interpreter
+
+- Install Flask
+   pip install flask
+	Installs flask just for this env - flask is not shared with any other enviroments/ projects
+
+- Open python interpreter, check that flask is installed - there should be no error message
+
+	[python]
+
+		from flask import Flask
+		
+    [end]
