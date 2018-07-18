@@ -1,19 +1,22 @@
-from flask import Flask
-app = Flask(__name__)
-''' Define the route
- Forward slash means root directory - this will be like the homepage
- We can call it index'''
-@app.route('/') 
+from flask import flask
+#Import SQL Alchemy
+from flask_sqlalchemy import SQLAlchemy
+
+
+
+app=Flask(__name__)
+#Set a key value to the config string for your database
+#mysql://username:password@server/db
+
+app.config['SQLALCHEMY_DATABASE_URI']="postgres://postgres:cd123@localhost/flaskmovie"
+
+# Create database object , pass app as arg
+db=SQLALchemy(app)
+
+@app.route('/')
 def index():
-	return "<h1 style = 'color: blue'>hello flask</h1>"
-'''Can return just "hello flask" - this is html with inline styling
+	return "hello flask"
 
- If app.py is run directly from cmd line it's going to be assigned the value
-  main, if it's assigned main, run the application'''
 
-if __name__=="__main__":
+if __name__ == "__main__"
 	app.run()
-
-'''If another script imports this app then it's not going to equal main
-It will be the name of the script that is importing this
- This code is only for executing from the command line directly'''
