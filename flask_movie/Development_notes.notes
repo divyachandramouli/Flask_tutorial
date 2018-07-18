@@ -68,13 +68,11 @@ Create a minimal flask application just to make sure everything works:
 with app.route('/') - start the function written below that returns hello flask
 - If you inspect the page you can see it's just text
 
-Continue Installation Steps:
+Establish a link with a postgreSQL database:
 
 - Install Flask-SQLAlchemy
 
-pip install Flask-SQLAlchemy
-
-Back to app.py:
+	pip install Flask-SQLAlchemy
 
 - Import SQLALchemy
 - Install Postgresql and create a database "flaskmovie" using the PgAdmin tool
