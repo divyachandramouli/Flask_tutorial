@@ -5,6 +5,7 @@ Flask Tutorial
 Chris Hawkes, YouTube
 
 Requirements:
+
 - Python
 - virtualenv
 - Flask
@@ -69,6 +70,7 @@ with app.route('/') - start the function written below that returns hello flask
 - If you inspect the page you can see it's just text
 
 Establish a link with a postgreSQL database:
+In app.py
 
 - Install Flask-SQLAlchemy
 
@@ -77,3 +79,13 @@ Establish a link with a postgreSQL database:
 - Import SQLALchemy
 - Install Postgresql and create a database "flaskmovie" using the PgAdmin tool
 - Write the config string in the format "postgres://username:password@server/dbname"
+
+Create database tables/schema:
+
+- Create a class and name the class with what we want the table name to be
+  For eg, class User - we want a User table
+- Assign each column with the options you want, set primary key, etc. - this autoincrements the ID 
+
+
+
+
