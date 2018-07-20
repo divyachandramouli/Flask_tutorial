@@ -96,11 +96,14 @@ Database tables/schema
 Create the database
 ---------------------------------
 Run the code from the python interpreter in the cmdline
-
-from app import db
-db.create_all()
+[python]
+	from app import db
+	db.create_all()
+[end]
 
 ------------------------------
 Adding data to the database
 ------------------------------
 Data is added using HTTP methods like 'get', 'post',etc.
+- get - when you are not making changes 
+- post - updating/posting something on the server
