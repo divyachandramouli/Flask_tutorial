@@ -1,11 +1,12 @@
 
---------------
-Flask Tutorial 
---------------
+------======Flask Tutorial============----
+
 Chris Hawkes, YouTube
 
-Requirements:
+- Building a basic movie website
 
+--------------------------------------------------------------------------------Requirements:
+--------------------------------------------------------------------------------
 - Python
 - virtualenv
 - Flask
@@ -13,11 +14,8 @@ Requirements:
 - Flask-SQLAlchemy
 
 
-Creating our first app:
-- Building a basic movie website
-
-Installation:
-
+-------------------------------------------------------------------------------Installation:
+--------------------------------------------------------------------------------
 - Need to use virtual env - comes with Python 3.5 - to be able to isolate the 
 development environment for each project we are working on - 
 
@@ -49,8 +47,8 @@ development environment for each project we are working on -
 		
     [end]
 
-Directories:
-
+-------------------------------------------------------------------------------Directories:
+-------------------------------------------------------------------------------
 When you create a web application you should have folders for your
 - Templates
 - Static content (css, js)
@@ -59,8 +57,8 @@ When you create a web application you should have folders for your
 - Create static, templates, images folders using mkdir
 - Go back to the project folder 
    cd..
-
-Create a minimal flask application just to make sure everything works:
+-------------------------------------------------------------------------------Create a minimal flask application just to make sure everything works:
+-------------------------------------------------------------------------------
 - Create a python file app.py to say hello flask
 - By default flask comes with a development server so we can test the application without deploying to an actual web server
 - It will host it on the localhost address with the 5000 port 
@@ -68,8 +66,8 @@ Create a minimal flask application just to make sure everything works:
 - The root directory is going to be executed and we defined our root directory 
 with app.route('/') - start the function written below that returns hello flask
 - If you inspect the page you can see it's just text
-
-Establish a link with a postgreSQL database:
+-------------------------------------------------------------------------------Establish a link with a postgreSQL database:
+-------------------------------------------------------------------------------
 In app.py
 
 - Install Flask-SQLAlchemy
@@ -79,9 +77,8 @@ In app.py
 - Import SQLALchemy
 - Install Postgresql and create a database "flaskmovie" using the PgAdmin tool
 - Write the config string in the format "postgres://username:password@server/dbname"
-
-Create database tables/schema:
-
+-------------------------------------------------------------------------------Database tables/schema:
+----------------------------------------------------------------------------
 - Create a class and name the class with what we want the table name to be
   For eg, class User - we want a User table
 - Assign each column with the options you want, set primary key, etc. - this autoincrements the ID 
@@ -89,10 +86,14 @@ Create database tables/schema:
 - Install psycopg2
 
 
-
-To create the database, run the code from the python interpreter in the cmdline:
+-------------------------------------------------------------------------------Create the database
+-------------------------------------------------------------------------------
+Run the code from the python interpreter in the cmdline
 
 from app import db
 db.create_all()
 
+-------------------------------------------------------------------------------Adding data to the database
+-------------------------------------------------------------------------------
 
+Data is added using HTTP methods like 'get', 'post',etc.
