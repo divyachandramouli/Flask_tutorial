@@ -107,3 +107,9 @@ Adding data to the database
 Data is added using HTTP methods like 'get', 'post',etc.
 - get - when you are not making changes 
 - post - updating/posting something on the server
+
+We have only one function - homepage
+Now we'll add one more function called post_user and use the 'POST' method
+We can't just return a static html on the homepage
+FLASK comes with jinja2 which has templates - import rendertemplate
+Add add_user.html to the templates folder in your project
