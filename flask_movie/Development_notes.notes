@@ -93,5 +93,6 @@ Create database tables/schema:
 To create the database, run the code from the python interpreter in the cmdline:
 
 from app import db
+db.create_all()
 
 
