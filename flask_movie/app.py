@@ -1,4 +1,4 @@
-from flask import flask
+from flask import Flask
 #Import SQL Alchemy
 from flask_sqlalchemy import SQLAlchemy
 
@@ -12,7 +12,7 @@ app=Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']="postgres://postgres:cd123@localhost/flaskmovie"
 
 # Create database object , pass app as arg
-db=SQLALchemy(app)
+db=SQLAlchemy(app)
 
 # Create database tables/schema
 # A table for a user
