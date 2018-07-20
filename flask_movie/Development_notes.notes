@@ -86,6 +86,12 @@ Create database tables/schema:
   For eg, class User - we want a User table
 - Assign each column with the options you want, set primary key, etc. - this autoincrements the ID 
 
+- Install psycopg2
 
+
+
+To create the database, run the code from the python interpreter in the cmdline:
+
+from app import db
 
 
