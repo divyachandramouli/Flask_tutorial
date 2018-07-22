@@ -13,7 +13,9 @@
  <input type="submit" />
 </form>
 
-   {{ myUser }}
+   {% for user in myUser %}
+   <li>{{user.username}}</li>
+   {% endfor %}
 
 </body>
 

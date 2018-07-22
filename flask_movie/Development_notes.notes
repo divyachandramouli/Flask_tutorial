@@ -137,3 +137,4 @@ Querying the Database
  - Add {{ myUser }} - this will display a list of user objects in standard form
  - Run app.py to see the list of users on the homepage
  
+ - We don't want te standard list view - loop over the list and display every username - write a for loop in the template
