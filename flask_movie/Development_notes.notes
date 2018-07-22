@@ -134,4 +134,6 @@ Querying the Database
  - Pass the list of objects to the template using jinja as an arg in render_template
  - Now you should be able to access myUser inside the template
  - Open the template and edit the form
+ - Add {{ myUser }} - this will display a list of user objects in standard form
+ - Run app.py to see the list of users on the homepage
  
