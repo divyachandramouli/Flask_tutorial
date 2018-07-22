@@ -119,4 +119,10 @@ When you return render_template it will look for the templates folder in your ro
 - Write HTML code to set up a form to accept username and email
 - Update the the post_user() to request form data, create a user object, add it to the database and save it
 - Turn debugging on
+- Error because request wasn't defined
 - Import request from flask 
+- Import redirect - Every request that flask gets, it expects to return a response object but we didn't return anything
+- Use redirect to return the url using 
+   url_for('<name of the homepage function>')
+- Import url_for from flask
+- Run app.py - form data gets saved in the db and gets redirected to homepage
