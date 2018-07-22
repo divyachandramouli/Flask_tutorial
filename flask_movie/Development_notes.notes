@@ -126,3 +126,12 @@ When you return render_template it will look for the templates folder in your ro
    url_for('<name of the homepage function>')
 - Import url_for from flask
 - Run app.py - form data gets saved in the db and gets redirected to homepage
+
+----------------------
+Querying the Database
+----------------------
+ - myUser a variable assigned to (USer refers to the class object - database table User)User.query.all() - returns a list of objects
+ - Pass the list of objects to the template using jinja as an arg in render_template
+ - Now you should be able to access myUser inside the template
+ - Open the template and edit the form
+ 

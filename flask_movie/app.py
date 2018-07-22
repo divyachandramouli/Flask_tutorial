@@ -33,7 +33,9 @@ class User(db.Model):
 
 @app.route('/')
 def index():
-	return render_template('add_user.html')
+	myUser=User.query.all() #Returns a list of objects
+	#Pass the list of objects to the template using jinja
+	return render_template('add_user.html', myUser=myUser)
 
 @app.route('/post_user',methods=['POST'])
 def post_user():
