@@ -1,7 +1,8 @@
 from flask import Flask
 #Import SQL Alchemy
 from flask_sqlalchemy import SQLAlchemy
-
+#Import render template
+from flask import render_template
 
 
 app=Flask(__name__)
@@ -31,8 +32,11 @@ class User(db.Model):
 
 @app.route('/')
 def index():
-	return "hello flask"
+	return render_template('add_user.html')
 
+@app.route('/post_user',methods=['POST'])
+def post_user():
+	return "hello flask"
 
 if __name__ == "__main__":
 	app.run()
