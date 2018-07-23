@@ -44,4 +44,5 @@ def post_user():
 	db.session.commit()
 
 if __name__ == "__main__":
+	app.debug=True
 	app.run()
