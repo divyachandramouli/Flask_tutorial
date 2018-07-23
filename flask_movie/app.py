@@ -1,8 +1,9 @@
 from flask import Flask
 #Import SQL Alchemy
 from flask_sqlalchemy import SQLAlchemy
-#Import render template
-from flask import render_template
+#Import render template, request, redirect
+from flask import render_template, request, redirect
+
 
 
 app=Flask(__name__)
@@ -42,6 +43,7 @@ def post_user():
 	db.session.add(user)
 	# Save it
 	db.session.commit()
+	return redirect(url_for('/'))#redirect to homepage
 
 if __name__ == "__main__":
 	app.debug=True

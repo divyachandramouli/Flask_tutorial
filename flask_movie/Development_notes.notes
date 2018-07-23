@@ -113,4 +113,10 @@ We have only one function - homepage
 
 We can't just return a static html on the homepage
 FLASK comes with jinja2 which has templates - import rendertemplate
+When you return render_template it will look for the templates folder in your root directory
+
 - Create add_user.html in the templates folder in your project
+- Write HTML code to set up a form to accept username and email
+- Update the the post_user() to request form data, create a user object, add it to the database and save it
+- Turn debugging on
+- Import request from flask 
