@@ -36,7 +36,12 @@ def index():
 
 @app.route('/post_user',methods=['POST'])
 def post_user():
-	return "hello flask"
+	# Get the values submitted in the form and create a User class object to add
+	user=User(request.form['username'], request.form['email'])
+	# Add the object to the databse
+	db.session.add(user)
+	# Save it
+	db.session.commit()
 
 if __name__ == "__main__":
 	app.run()
