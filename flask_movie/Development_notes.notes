@@ -140,4 +140,5 @@ Querying the Database
  - We don't want te standard list view - loop over the list and display every username - write a for loop in the template
 
 - FIltering data :
-  User.query.filter_by(<condition>) - use.first() in case there are duplicates - we don't need it
+  User.query.filter_by(<condition>) - use.first() to return one object even if there are multiple
+  oneitem.username to display just the username instead of the list format
