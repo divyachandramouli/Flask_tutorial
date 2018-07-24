@@ -130,11 +130,11 @@ When you return render_template it will look for the templates folder in your ro
 ----------------------
 Querying the Database
 ----------------------
- - myUser a variable assigned to (USer refers to the class object - database table User)User.query.all() - returns a list of objects
+ - all_users - a variable assigned to (USer refers to the class object - database table User)User.query.all() - returns a list of objects
  - Pass the list of objects to the template using jinja as an arg in render_template
  - Now you should be able to access myUser inside the template
  - Open the template and edit the form
- - Add {{ myUser }} - this will display a list of user objects in standard form
+ - Add {{ all_users }} - this will display a list of user objects in standard form
  - Run app.py to see the list of users on the homepage
  
  - We don't want te standard list view - loop over the list and display every username - write a for loop in the template
