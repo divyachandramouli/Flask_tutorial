@@ -138,3 +138,6 @@ Querying the Database
  - Run app.py to see the list of users on the homepage
  
  - We don't want te standard list view - loop over the list and display every username - write a for loop in the template
+
+- FIltering data :
+  User.query.filter_by(<condition>) - use.first() in case there are duplicates - we don't need it

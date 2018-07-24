@@ -33,9 +33,13 @@ class User(db.Model):
 
 @app.route('/')
 def index():
+	# Query db to retrieve users and display on homepage
 	all_users=User.query.all() #Returns a list of objects (all users)
 	#Pass the list of objects to the template using jinja
-	return render_template('add_user.html', all_users=all_users)
+
+	# Filter data from db and display 
+	oneItem = User.query.filter_by(username="test2").first() #Returns only one object even if there are multiple
+	return render_template('add_user.html', all_users=all_users, oneItem = oneItem)
 
 @app.route('/post_user',methods=['POST'])
 def post_user():
