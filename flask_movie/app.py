@@ -43,6 +43,13 @@ def index():
 	# Use .all() to get all the matches
 	return render_template('add_user.html', all_users=all_users, oneItem = oneItem)
 
+@app.route('/profile/<username>')
+def profile():
+	user=User.query.filter_by(username=username).first() #so that we get none if it is not matched
+	return render_template('profile.html', user=user)
+	
+
+
 @app.route('/post_user',methods=['POST'])
 def post_user():
 	# Get the values submitted in the form and create a User class object to add

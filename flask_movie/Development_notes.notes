@@ -139,6 +139,17 @@ Querying the Database
  
  - We don't want te standard list view - loop over the list and display every username - write a for loop in the template
 
-- FIltering data :
+- Filtering data :
   User.query.filter_by(<condition>) - use.first() to return one object even if there are multiple , use .all() to get all matches
   oneitem.username to display just the username instead of the list format
+
+ --------------------
+  Dynamic URL Querying
+ ---------------------
+
+ We want to create a profile page where we would pass an arg thro the URL and take the argument which is the username of the profile that we are viewing
+ Use that argument to query the db to get specific user data for that user
+
+ When you define app.route put the argument wrapped in <> - this will get appended to the args keyword in Flask 
+ - Create a profile method that queries by a username  and renders the profile template which takes username as argument
+
