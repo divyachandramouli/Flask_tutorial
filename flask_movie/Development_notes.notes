@@ -156,10 +156,10 @@ Querying the Database
  - Create a profile template file - use the argument and display details
  - Pass the arg to the profile method as well 
 
- We are now able to pass an arg while typing the url on the browser and the template is able to handle it, query data and return the details of that user - returns no data when not matched
+ We are now able to pass an argument while typing the url on the browser and the template is able to handle it, query data and return the details of that user - returns no data when not matched
 
  - Redirect if user is none - don't just give a skeleton template 
 
- 
+
 
 
