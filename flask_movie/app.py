@@ -38,7 +38,9 @@ def index():
 	#Pass the list of objects to the template using jinja
 
 	# Filter data from db and display 
-	oneItem = User.query.filter_by(username="test2").first() #Returns only one object even if there are multiple
+	oneItem = User.query.filter_by(username="test2").all() #Returns only one object even if there are multiple
+	#first() is guaranteed to be unique - returns None for no match
+	# Use .all() to get all the matches
 	return render_template('add_user.html', all_users=all_users, oneItem = oneItem)
 
 @app.route('/post_user',methods=['POST'])
