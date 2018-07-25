@@ -44,10 +44,10 @@ def index():
 	return render_template('add_user.html', all_users=all_users, oneItem = oneItem)
 
 @app.route('/profile/<username>')
-def profile():
+def profile(username):
 	user=User.query.filter_by(username=username).first() #so that we get none if it is not matched
 	return render_template('profile.html', user=user)
-	
+
 
 
 @app.route('/post_user',methods=['POST'])
