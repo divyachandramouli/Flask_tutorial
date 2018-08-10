@@ -56,8 +56,7 @@ def post_user():
 	user=User(request.form['username'], request.form['email'])
 	# Add the object to the databse
 	db.session.add(user)
-	# Save it
-	db.session.commit()
+	db.session.commit()# Save it
 	return redirect(url_for('index'))#redirect to homepage
 
 if __name__ == "__main__":
