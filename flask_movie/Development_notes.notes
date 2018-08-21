@@ -13,6 +13,7 @@ Requirements
 - Flask
 - PostgreSQL
 - Flask-SQLAlchemy
+- Heroku CLI
 
 
 --------------------
@@ -165,3 +166,64 @@ Querying the Database
 ---------------------------
 Implementing Authentication
 ---------------------------
+ ...
+
+ ---------------------------
+ Deploy on Heroku
+ ---------------------------
+ - Create a heroku account
+- Download Heroku CLI for the operating system
+- Initialize the folder containing the sample app as a git repo
+- Open git bash
+
+Login into your heroku account:
+$ heroku  login
+
+- Enter login credentials
+
+Create an app on Heroku, which prepares Heroku to receive your source code:
+$ heroku create <appname>
+
+Or 
+
+Go to the heroku website and create an app with the name you choose
+
+When you create an app, a git remote (called heroku) is also created and 
+associated with your local git repository.
+
+Heroku generates a random name for your app, 
+or you can pass a parameter to specify your own app name.
+
+Add the heroku remote:
+heroku git:remote -a <appname>
+
+
+Create Procfile from git bash:
+$ touch Procfile
+
+It's a file without extension in the root directory of the app
+It should specify the command Heroku should use to start your app
+
+Don't include any extension 
+web: gunicorn -b :$PORT sample_app_deploy:app
+
+Include this line in the procfile
+
+Requirements.txt:
+In the cmd shell, cd to the root directory of the app
+Activate the env and  create requirements.txt
+pip freeze > requirements.txt
+
+
+Stage and commit your code to the repo:
+git add .
+git commit -m "<msg>"
+
+Deploy your code:
+$ git push heroku master
+
+Viewing the app:
+Once it has been deployed, you can use the URL to view the app
+Or, use
+
+$ heroku open
