@@ -12,7 +12,7 @@ app=Flask(__name__)
 
 # Connect the app with the database
 #app.config['SQLALCHEMY_DATABASE_URI']="postgres://postgres:cd123@localhost/flaskmovie"
-
+heroku=Heroku(app)
 # Create database object , pass app as arg
 db=SQLAlchemy(app)
 
