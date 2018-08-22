@@ -4,14 +4,14 @@ from flask_sqlalchemy import SQLAlchemy
 #Import render template, request, redirect
 from flask import render_template, request, redirect, url_for
 
-
+from flask.ext.heroku import Heroku
 
 app=Flask(__name__)
 #Set a key value to the config string for your database
 #mysql://username:password@server/db
 
 # Connect the app with the database
-app.config['SQLALCHEMY_DATABASE_URI']="postgres://postgres:cd123@localhost/flaskmovie"
+#app.config['SQLALCHEMY_DATABASE_URI']="postgres://postgres:cd123@localhost/flaskmovie"
 
 # Create database object , pass app as arg
 db=SQLAlchemy(app)
