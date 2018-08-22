@@ -205,9 +205,12 @@ It's a file without extension in the root directory of the app
 It should specify the command Heroku should use to start your app
 
 Don't include any extension 
-web: gunicorn -b :$PORT sample_app_deploy:app
+web: gunicorn -b :$PORT :app
 
 Include this line in the procfile
+
+Adding Port:
+app.run arg as port= 33507
 
 Requirements.txt:
 In the cmd shell, cd to the root directory of the app
